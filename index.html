@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pavithra | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background: url('assets/images/portfolio_background.jpg') no-repeat center center fixed; background-size: cover;">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">Pavithra A M</h1>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contacts.html">Contact Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-image">
+        <img src="assets/images/Profile_picture.jpeg" alt="Pavithra Profile Picture">
+      </div>
+      <div class="hero-text">
+        <h1>Hello, I'm <span>Pavithra</span></h1>
+        <h2 id="typing-text"></h2>
+        <div class="hero-buttons">
+          <a href="projects.html" class="btn">View Projects</a>
+          <a href="contacts.html" class="btn">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Typing Script -->
+  <script>
+    const text = "Aspiring Data Scientist | Full Stack Developer";
+    const typingEl = document.getElementById("typing-text");
+    let index = 0;
+
+    function typeCharacter() {
+      if (index < text.length) {
+        typingEl.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeCharacter, 80); // typing speed
+      }
+    }
+
+    window.onload = typeCharacter;
+  </script>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Pavithra</p>
+  </footer>
+
+</body>
+</html>

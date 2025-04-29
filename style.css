@@ -1,0 +1,587 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    background: url('assets/images/portfolio_background_image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: #213448;
+    padding: 1.5rem 0;
+  }
+  
+  .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 3.0rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 30px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #00e5ff;
+    border-bottom: 2px solid #00e5ff;
+  }
+  #typing-text {
+    font-size: 2.0rem;
+    font-weight: 600;
+    color: #f5f5f5;
+    margin-bottom: 30px;  /* This creates space between the text and the buttons */
+  }
+  
+  
+  /* Hero Section */
+.hero {
+  position: relative; /* Important for overlay */
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('assets/images/portfolio_bg3.png') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* White transparent overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent white overlay */
+  z-index: 1;
+}
+
+/* Content stays above the overlay */
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 2; /* Important: higher than ::before */
+}
+
+  .hero-image img {
+    width: 400px;
+    height:600px;
+    border-radius: 80%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    padding: 0;
+  }
+  
+  .hero-text h1 {
+    font-size: 5rem;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text span {
+    color: #FF9A9A;
+  }
+  
+  .hero-text p {
+    font-size: 2.0rem;
+    color: #FDFAF6;
+    margin-bottom: 30px;
+  }
+  
+  .hero-buttons .btn {
+    display: inline-block;
+    background: #213448;
+    color: white;
+    padding: 14px 48px;
+    margin-right: 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: background 0.3s;
+    justify-content: flex-start;
+  }
+  
+  .hero-buttons .btn:hover {
+    background: #00bcd4;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+  }
+  
+  .projects-section {
+    background: url('assets/images/projects_bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 20px;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .projects-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .projects-section h2 {
+    font-size: 4.5rem;
+    color: #4f46e5;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Grid layout for projects */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 30px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  /* Individual project card */
+  .project-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-card h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .project-card p {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 2.0;
+  }
+  
+  .project-card .btn {
+    background:  #213448;
+    color: white;
+    font-weight: bold;
+    padding: 20px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+  }
+  
+  .project-card .btn:hover {
+    background:  #213448;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  
+  /* Education Section */
+  .education {
+    background: url('assets/images/education_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .education .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .education h2 {
+    font-size: 4.0rem;
+    color: #4f46e5;
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Grid layout */
+  .education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+  
+  /* Individual education card */
+  .education-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 60px;
+    border-radius: 16px;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 16px 30px rgba(0, 0, 0, 0.25);
+  }
+  
+  .education-card h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 10px;
+  }
+  
+  .education-card p {
+    color: #444;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 1024px) {
+    .education-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+  /* Experience Section */
+  .experience-section {
+    background: url('assets/images/experience_bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 90px 30px;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .experience-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .experience-section h2 {
+    font-size: 4.0rem;
+    color: #4f46e5;
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+  
+  .experience-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 60px;
+    border-radius: 16px;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    font-size: 3.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 16px 30px rgba(0, 0, 0, 0.25);
+  }
+  
+  .experience-card h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 15px;
+  }
+  
+  .experience-card p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 15px;
+  }
+  
+  .experience-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .experience-card ul li {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 1024px) {
+    .experience-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+  /* Certifications Section */
+  .certifications-section {
+    background: url('assets/images/certifications_bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 80px 20px;
+  }
+  
+  .certifications-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #4f46e5;
+    font-size: 4.0rem;
+    font-weight: 700;
+  }
+  
+  /* Grid layout for certification cards */
+  .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  
+  /* Individual card styling */
+  .certification-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover animation */
+  .certification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Title inside each card */
+  .certification-card h3 {
+    color: #2a2a2a;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  /* Description (optional) */
+  .certification-card p {
+    color: #555;
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
+  /*resume section**/
+  .resume-section {
+    background: url('assets/images/resume_bg2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .resume-section .container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .resume-section h2 {
+    font-size: 4rem;
+    color: #4f46e5;
+    margin-bottom: 20px;
+  }
+  
+  .resume-section p {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #0b0a0a;
+  }
+  
+  .resume-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .resume-buttons .btn {
+    background: #213448;
+    color: white;
+    padding: 20px 40px;
+    font-size: 1.8rem;
+    border-radius: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .resume-buttons .btn:hover {
+    background: #00bcd4;
+  }
+
+  
+ /* Contact Section */
+.contact-section {
+  background: url('assets/images/contactme_bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-center {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact-form h2 {
+  color: #4f46e5;
+  margin-bottom: 20px;
+  font-size: 2.0rem;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 2.0rem;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form .btn {
+  background: #213448;
+  color: white;
+  font-weight: bold;
+  padding: 18px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.contact-form .btn:hover {
+  background: #00bcd4;
+}
+
+/* Social Links Below Form */
+.social-links {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-links a {
+  font-size: 2.0rem;
+  color: #4f46e5;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-links a:hover {
+  background:#213448;
+  transform: scale(1.2);
+  color: white;
+}
